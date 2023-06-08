@@ -1,0 +1,20 @@
+patch:
+  punctuator/import_preset: my_symbols
+  translator/dictionary: my_pinyin
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [中, 英]
+    - name: simplification
+      states: [繁, 简]
+    - name: full_shape
+      states: [半, 全]
+    - name: emoji_suggestion
+      states: ["🈚️ \uFE0E", "🈶️ \uFE0F"]
+    - name: ascii_punct
+      states: [。, ．]
+  "engine/filters/@before 0": simplifier@emoji_suggestion
+  emoji_suggestion:
+    opencc_config: emoji.json
+    option_name: emoji_suggestion
+    tips: all

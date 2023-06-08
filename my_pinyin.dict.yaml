@@ -1,0 +1,16 @@
+---
+name: my_pinyin
+version: "1"
+sort: by_weight
+use_preset_vocabulary: true
+import_tables:
+  - luna_pinyin
+...
+台北	tai bei		100
+台南	tai nan		100
+台灣	tai wan		100
+台中	tai zhong	100
+為	wei		100
+為何	wei he		100
+為什麼	wei shen me	100
+行為	xing wei	100
